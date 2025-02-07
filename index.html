@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio Técnico SR - Especialistas en Aires Acondicionados</title>
+    
+   
+    <link href="./css/styles.css" rel="stylesheet">
+</head>
+<body class="font-sans">
+    
+    <header class="fixed w-full bg-white shadow-md z-50 top-0">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="https://placehold.co/200x200" alt="Demo Logo" class="h-32 w-auto mr-3">
+                <span class="text-2xl font-bold text-blue-900">Demo Técnico AC</span>
+            </div>
+            
+         
+            <div class="hidden md:flex space-x-6">
+                <a href="#inicio" class="hover:text-blue-500">Inicio</a>
+                <a href="#servicios" class="hover:text-blue-500">Servicios</a>
+                <a href="#nosotros" class="hover:text-blue-500">Nosotros</a>
+                <a href="#contacto" class="hover:text-blue-500">Contacto</a>
+            </div>
+            
+
+            <button class="md:hidden" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        
+    
+        <div class="hidden md:hidden" id="mobile-menu">
+            <div class="px-4 py-3 space-y-3">
+                <a href="#inicio" class="block hover:text-blue-500">Inicio</a>
+                <a href="#servicios" class="block hover:text-blue-500">Servicios</a>
+                <a href="#nosotros" class="block hover:text-blue-500">Nosotros</a>
+                <a href="#contacto" class="block hover:text-blue-500">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+   
+    <div id="promo-flotante" class="fixed top-40 right-0 z-50 bg-yellow-400 text-blue-900 py-3 px-6 rounded-l-lg shadow-lg transform hover:translate-x-2 transition-transform duration-300 font-bold cursor-pointer">
+        <button onclick="cerrarPromo()" class="absolute top-1 right-2 text-blue-900 hover:text-blue-700">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="flex items-center mt-2">
+            <i class="fas fa-gift text-xl mr-3"></i>
+            <div>
+                <p class="text-sm font-bold">¡15% OFF en tu próximo service!</p>
+                <p class="text-xs">Con tu primera reparación</p>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="bg-blue-900 text-white py-2 px-4 text-center mt-32">
+        <p class="text-sm">🔥 Promoción especial: 15% de descuento en mantenimiento preventivo</p>
+    </div>
+
+
+    <main>
+       
+        <section id="inicio" class="relative pt-16 pb-8 px-4 min-h-[60vh] flex items-center">
+            
+            <div class="absolute inset-0 z-0">
+                <img src="https://climarosario.com.ar/assets/images/air-conditioning-technician-repairing-conditioner-260nw-1164371893-390x280.jpeg" 
+                     alt="Background" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-blue-700/90"></div>
+            </div>
+            
+            
+            <div class="container mx-auto relative z-10 text-white">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="md:w-1/2 space-y-4">
+                        <h1 class="text-3xl md:text-4xl font-bold">
+                            Servicio Técnico Profesional de Aires Acondicionados
+                        </h1>
+                        <p class="text-lg text-blue-100">
+                            Expertos en instalación, mantenimiento y reparación de equipos de aire acondicionado
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="#contacto" class="bg-white text-blue-900 px-4 py-2 rounded-lg font-bold hover:bg-blue-100 transition">
+                                Contactar Ahora
+                            </a>
+                            <a href="#servicios" class="border-2 border-white px-4 py-2 rounded-lg font-bold hover:bg-white hover:text-blue-900 transition">
+                                Nuestros Servicios
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 mt-6 md:mt-0">
+                        <img src="https://res.cloudinary.com/dpcpcnqmq/image/upload/v1738884321/Manu_Rodriguez_1_pyw4xz.png" 
+                             alt="Servicio Técnico SR" 
+                             class="w-full max-w-sm mx-auto transform transition-all duration-500 
+                                    group-hover:scale-110">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="servicios" class="py-16 px-4 bg-gray-50">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Nuestros Servicios</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition group">
+                        <div class="text-4xl text-blue-500 mb-4 group-hover:scale-110 transition">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Reparación</h3>
+                        <p class="text-gray-600 mb-4">Soluciones rápidas y efectivas para cualquier problema con su equipo de aire acondicionado.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Diagnóstico preciso
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Repuestos originales
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Garantía de servicio
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition group">
+                        <div class="text-4xl text-blue-500 mb-4 group-hover:scale-110 transition">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Mantenimiento</h3>
+                        <p class="text-gray-600 mb-4">Servicios preventivos para mantener su equipo funcionando de manera óptima.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Limpieza profunda
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Revisión de componentes
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Optimización del rendimiento
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition group">
+                        <div class="text-4xl text-blue-500 mb-4 group-hover:scale-110 transition">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Instalación</h3>
+                        <p class="text-gray-600 mb-4">Instalación profesional de equipos nuevos con garantía de trabajo.</p>
+                        <ul class="text-gray-600 space-y-2">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Asesoramiento técnico
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Instalación certificada
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Pruebas de funcionamiento
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="md:w-1/2">
+                        <img src="https://infocielo.com/wp-content/uploads/2024/11/aire-acondicionadojpg.jpg" 
+                             alt="Control de Aire Acondicionado" 
+                             class="rounded-lg shadow-lg w-full object-cover h-64">
+                    </div>
+                    <div class="md:w-1/2 space-y-4">
+                        <h2 class="text-3xl font-bold text-blue-900">Uso Eficiente de tu Aire Acondicionado</h2>
+                        <p class="text-gray-600">Mantén tu equipo funcionando de manera óptima siguiendo nuestras recomendaciones de uso y mantenimiento regular.</p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Temperatura recomendada: 23-24°C
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Limpieza de filtros mensual
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                Mantenimiento preventivo cada 6 meses
+                            </li>
+                        </ul>
+                        <a href="#contacto" 
+                           class="inline-block bg-blue-900 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-800 transition mt-4">
+                            Agenda tu Mantenimiento
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Marcas con las que trabajamos</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+                    <div class="p-4 flex justify-center grayscale hover:grayscale-0 transition-all">
+                        <img src="https://www.lg.com/lg4-common-gp/images/common/header/logo-b2c.jpg" 
+                             alt="LG" class="h-12 object-contain">
+                    </div>
+                    <div class="p-4 flex justify-center grayscale hover:grayscale-0 transition-all">
+                        <img src="https://logos-world.net/wp-content/uploads/2020/04/Samsung-Logo.png" 
+                             alt="Samsung" class="h-12 object-contain">
+                    </div>
+                    <div class="p-4 flex justify-center grayscale hover:grayscale-0 transition-all">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Carrier_Corporation_logo.svg/2560px-Carrier_Corporation_logo.svg.png" 
+                             alt="Carrier" class="h-12 object-contain">
+                    </div>
+                    <div class="p-4 flex justify-center grayscale hover:grayscale-0 transition-all">
+                        <img src="https://seeklogo.com/images/T/trane-logo-B3D1A39C34-seeklogo.com.png" 
+                             alt="Trane" class="h-12 object-contain">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="nosotros" class="py-16 px-4 bg-white">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">¿Por Qué Elegirnos?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl text-blue-500 mb-4">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Servicio 24/7</h3>
+                        <p class="text-gray-600">Disponibles para emergencias las 24 horas, todos los días.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl text-blue-500 mb-4">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Técnicos Certificados</h3>
+                        <p class="text-gray-600">Personal altamente capacitado y con experiencia.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl text-blue-500 mb-4">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Garantía de Servicio</h3>
+                        <p class="text-gray-600">Todos nuestros trabajos cuentan con garantía.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl text-blue-500 mb-4">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Precios Justos</h3>
+                        <p class="text-gray-600">Tarifas competitivas y transparentes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="py-16 bg-blue-900 text-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div>
+                        <div class="text-4xl font-bold mb-2">1300+</div>
+                        <div class="text-blue-200">Clientes Satisfechos</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2">500+</div>
+                        <div class="text-blue-200">Servicios Realizados</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2">5+</div>
+                        <div class="text-blue-200">Años de Experiencia</div>
+                    </div>
+                    <div>
+                        <div class="text-4xl font-bold mb-2">24/7</div>
+                        <div class="text-blue-200">Soporte Disponible</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="py-16 px-4 bg-white">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Beneficios de nuestro servicio</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition">
+                        <div class="text-blue-500 text-4xl mb-4">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Ahorro Energético</h3>
+                        <p class="text-gray-600">Optimizamos tu equipo para un consumo eficiente, reduciendo costos en tu factura eléctrica.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition">
+                        <div class="text-blue-500 text-4xl mb-4">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Respuesta Rápida</h3>
+                        <p class="text-gray-600">Atendemos emergencias en menos de 2 horas para que no te quedes sin aire acondicionado.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition">
+                        <div class="text-blue-500 text-4xl mb-4">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Garantía Extendida</h3>
+                        <p class="text-gray-600">Todos nuestros servicios incluyen garantía por escrito para tu tranquilidad.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="py-16 px-4 bg-white">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Lo que dicen nuestros clientes</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <div class="text-blue-500 mb-4">
+                            <i class="fas fa-quote-left text-3xl"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            "Excelente servicio, muy profesionales y puntuales. Resolvieron el problema de mi aire acondicionado rápidamente."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600 font-bold">Cliente Demo</span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <div class="text-blue-500 mb-4">
+                            <i class="fas fa-quote-left text-3xl"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            "Muy buen trabajo en la instalación de mi nuevo equipo. El técnico fue muy amable y explicó todo el proceso."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600 font-bold">Cliente Demo</span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <div class="text-blue-500 mb-4">
+                            <i class="fas fa-quote-left text-3xl"></i>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            "Servicio de mantenimiento muy completo. Mi equipo funciona como nuevo después de la limpieza."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="ml-2 text-gray-600 font-bold">Cliente Demo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="py-16 px-4 bg-white">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Preguntas Frecuentes</h2>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    
+                    <div class="border rounded-lg">
+                        <button class="w-full px-6 py-4 text-left font-bold flex justify-between items-center hover:bg-gray-50">
+                            <span>¿Cada cuánto debo hacer mantenimiento a mi aire acondicionado?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="px-6 py-4 border-t">
+                            <p class="text-gray-600">Se recomienda realizar mantenimiento preventivo cada 6 meses para garantizar el óptimo funcionamiento y prolongar la vida útil del equipo.</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="border rounded-lg">
+                        <button class="w-full px-6 py-4 text-left font-bold flex justify-between items-center hover:bg-gray-50">
+                            <span>¿Cuánto tiempo toma una instalación típica?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="px-6 py-4 border-t">
+                            <p class="text-gray-600">Una instalación estándar suele tomar entre 3 y 4 horas, dependiendo de la complejidad y el tipo de equipo.</p>
+                        </div>
+                    </div>
+                    
+                    
+                    <div class="border rounded-lg">
+                        <button class="w-full px-6 py-4 text-left font-bold flex justify-between items-center hover:bg-gray-50">
+                            <span>¿Ofrecen garantía por el servicio?</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="px-6 py-4 border-t">
+                            <p class="text-gray-600">Sí, todos nuestros servicios incluyen garantía. La duración varía según el tipo de servicio realizado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="contacto" class="py-16 px-4 bg-gray-50">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Contáctanos</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                    
+                    <div class="lg:col-span-3">
+                        <div class="bg-white p-8 rounded-lg shadow-md">
+                            <form id="contactForm" class="space-y-4">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="nombre" class="block text-gray-700 mb-2">Nombre</label>
+                                        <input type="text" id="nombre" name="nombre"
+                                               class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                               required>
+                                    </div>
+                                    <div>
+                                        <label for="telefono" class="block text-gray-700 mb-2">Teléfono</label>
+                                        <input type="tel" id="telefono" name="telefono"
+                                               class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                               required>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                    <input type="email" id="email" name="email"
+                                           class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                           required>
+                                </div>
+                                <div>
+                                    <label for="servicio" class="block text-gray-700 mb-2">Servicio que necesita</label>
+                                    <select id="servicio" name="servicio"
+                                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            required>
+                                        <option value="">Seleccione un servicio</option>
+                                        <option value="instalacion">Instalación</option>
+                                        <option value="reparacion">Reparación</option>
+                                        <option value="mantenimiento">Mantenimiento</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="mensaje" class="block text-gray-700 mb-2">Mensaje</label>
+                                    <textarea id="mensaje" name="mensaje" rows="4"
+                                              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                              required></textarea>
+                                </div>
+                                <button type="submit" 
+                                        class="w-full bg-blue-900 text-white py-3 rounded-lg font-bold hover:bg-blue-800 transition
+                                               transform hover:scale-105">
+                                    Enviar Mensaje
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+                    
+                    <div class="bg-blue-900 text-white p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <i class="fas fa-phone mr-4 text-2xl"></i>
+                                <div>
+                                    <p class="font-bold">Llámanos</p>
+                                    <p>+1 234 567 8900</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-envelope mr-4 text-2xl"></i>
+                                <div>
+                                    <p class="font-bold">Email</p>
+                                    <p>contacto@demotecnico.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-user mr-4 text-2xl"></i>
+                                <div>
+                                    <p class="font-bold">Técnico Responsable</p>
+                                    <p>Juan Técnico</p>
+                                </div>
+                            </div>
+                            <div class="pt-6 border-t border-blue-800">
+                                <p class="font-bold mb-2">Síguenos en redes:</p>
+                                <div class="flex space-x-4">
+                                    <a href="#" class="text-2xl hover:text-blue-300 transition">
+                                        <i class="fab fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="text-2xl hover:text-blue-300 transition">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="#" class="text-2xl hover:text-blue-300 transition">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contacto</h3>
+                    <p class="mb-2"><i class="fas fa-phone mr-2"></i> +1 234 567 8900</p>
+                    <p class="mb-2"><i class="fas fa-envelope mr-2"></i> contacto@demotecnico.com</p>
+                    <p class="mb-2"><i class="fas fa-user mr-2"></i> Juan Técnico</p>
+                </div>
+                
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Enlaces Rápidos</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="hover:text-blue-300">Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-blue-300">Servicios</a></li>
+                        <li><a href="#nosotros" class="hover:text-blue-300">Nosotros</a></li>
+                        <li><a href="#contacto" class="hover:text-blue-300">Contacto</a></li>
+                    </ul>
+                </div>
+
+                
+                <div class="text-center">
+                    <img src="https://placehold.co/200x200" alt="Demo Logo" class="h-24 mx-auto mb-4">
+                    <p class="text-sm text-gray-300">
+                        Sitio demo creado por 
+                        <a href="#" target="_blank" class="text-blue-300 hover:text-blue-200">
+                            Demo Web Solutions
+                        </a>
+                    </p>
+                    <p class="text-sm text-gray-300">
+                        www.demowebsolutions.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <div id="formMessage" class="hidden mt-4 p-4 rounded-lg"></div>
+
+    
+    <div id="submitSpinner" class="hidden">
+        <div class="flex justify-center items-center">
+            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-900"></div>
+            <span class="ml-2">Enviando...</span>
+        </div>
+    </div>
+
+    
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html> 
